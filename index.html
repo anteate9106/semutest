@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세무인사이드 - 세무법인 청년들을 위한 역량강화 플랫폼</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><i class="fas fa-calculator"></i> 세무인사이드</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#exams" class="nav-link">시험문제</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#results" class="nav-link">성적확인</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#login" class="nav-link login-btn">로그인</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 홈 섹션 -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">세무법인 청년들을 위한<br>전문 역량강화 플랫폼</h1>
+                    <p class="hero-description">
+                        세무인사이드에서 실전 문제를 풀고, 성적을 확인하며, 
+                        세무업무 역량을 한 단계 업그레이드하세요.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="startExam()">
+                            <i class="fas fa-play"></i> 시험 시작하기
+                        </button>
+                        <button class="btn btn-secondary" onclick="viewResults()">
+                            <i class="fas fa-chart-line"></i> 성적 확인하기
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="stats-card">
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>실전 문제</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>1,200+</h3>
+                            <p>활성 사용자</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>95%</h3>
+                            <p>만족도</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 시험문제 섹션 -->
+        <section id="exams" class="exams-section">
+            <div class="container">
+                <h2 class="section-title">시험문제</h2>
+                <div class="exam-categories">
+                    <div class="category-card" onclick="selectCategory('tax-law')">
+                        <div class="category-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3>세법</h3>
+                        <p>소득세, 법인세, 부가가치세 등</p>
+                        <span class="question-count">150문제</span>
+                    </div>
+                    <div class="category-card" onclick="selectCategory('accounting')">
+                        <div class="category-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>회계</h3>
+                        <p>재무회계, 관리회계, 원가회계</p>
+                        <span class="question-count">120문제</span>
+                    </div>
+                    <div class="category-card" onclick="selectCategory('business-law')">
+                        <div class="category-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>상법</h3>
+                        <p>회사법, 상법총칙, 어음수표법</p>
+                        <span class="question-count">80문제</span>
+                    </div>
+                    <div class="category-card" onclick="selectCategory('practice')">
+                        <div class="category-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>실무</h3>
+                        <p>세무실무, 신고서 작성법</p>
+                        <span class="question-count">200문제</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 성적확인 섹션 -->
+        <section id="results" class="results-section">
+            <div class="container">
+                <h2 class="section-title">성적확인</h2>
+                <div class="results-container">
+                    <div class="results-summary">
+                        <div class="summary-card">
+                            <h3>전체 성적</h3>
+                            <div class="score-circle">
+                                <span class="score">85</span>
+                                <span class="score-unit">점</span>
+                            </div>
+                            <p>총 550문제 중 467문제 정답</p>
+                        </div>
+                        <div class="summary-stats">
+                            <div class="stat-row">
+                                <span>시험 응시 횟수</span>
+                                <span>24회</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>평균 점수</span>
+                                <span>82.3점</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>최고 점수</span>
+                                <span>95점</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="results-detail">
+                        <h3>과목별 성적</h3>
+                        <div class="subject-scores">
+                            <div class="subject-score">
+                                <div class="subject-info">
+                                    <span class="subject-name">세법</span>
+                                    <span class="subject-score-value">88점</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="subject-score">
+                                <div class="subject-info">
+                                    <span class="subject-name">회계</span>
+                                    <span class="subject-score-value">82점</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 82%"></div>
+                                </div>
+                            </div>
+                            <div class="subject-score">
+                                <div class="subject-info">
+                                    <span class="subject-name">상법</span>
+                                    <span class="subject-score-value">78점</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 78%"></div>
+                                </div>
+                            </div>
+                            <div class="subject-score">
+                                <div class="subject-info">
+                                    <span class="subject-name">실무</span>
+                                    <span class="subject-score-value">90점</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 로그인 모달 -->
+    <div id="login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>로그인</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username">아이디</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">로그인</button>
+            </form>
+            <p class="signup-link">계정이 없으신가요? <a href="#" onclick="showSignup()">회원가입</a></p>
+        </div>
+    </div>
+
+    <!-- 시험 모달 -->
+    <div id="exam-modal" class="modal">
+        <div class="modal-content exam-content">
+            <span class="close">&times;</span>
+            <div class="exam-header">
+                <h2 id="exam-title">세법 시험</h2>
+                <div class="exam-timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="timer">30:00</span>
+                </div>
+            </div>
+            <div class="exam-body">
+                <div class="question-container">
+                    <div class="question-number">문제 1 / 20</div>
+                    <div class="question-text" id="question-text">
+                        다음 중 소득세법상 종합소득세 과세표준의 계산에 관한 설명으로 옳은 것은?
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q1" value="1">
+                            <span class="option-text">1. 종합소득공제는 과세표준 계산 시 공제된다.</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="2">
+                            <span class="option-text">2. 기본공제는 과세표준 계산 후 공제된다.</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="3">
+                            <span class="option-text">3. 특별공제는 과세표준 계산 전에 공제된다.</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="4">
+                            <span class="option-text">4. 표준공제는 과세표준 계산 시 공제되지 않는다.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="exam-footer">
+                <button class="btn btn-secondary" onclick="prevQuestion()">이전</button>
+                <div class="question-nav">
+                    <button class="nav-btn" onclick="goToQuestion(1)">1</button>
+                    <button class="nav-btn" onclick="goToQuestion(2)">2</button>
+                    <button class="nav-btn" onclick="goToQuestion(3)">3</button>
+                    <button class="nav-btn" onclick="goToQuestion(4)">4</button>
+                    <button class="nav-btn" onclick="goToQuestion(5)">5</button>
+                </div>
+                <button class="btn btn-primary" onclick="nextQuestion()">다음</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>세무인사이드</h3>
+                    <p>세무법인 청년들을 위한 전문 역량강화 플랫폼</p>
+                </div>
+                <div class="footer-section">
+                    <h4>서비스</h4>
+                    <ul>
+                        <li><a href="#exams">시험문제</a></li>
+                        <li><a href="#results">성적확인</a></li>
+                        <li><a href="#">학습자료</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>고객지원</h4>
+                    <ul>
+                        <li><a href="#">문의하기</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">이용약관</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 세무인사이드. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
